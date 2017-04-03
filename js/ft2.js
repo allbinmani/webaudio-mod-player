@@ -1378,3 +1378,5 @@ Fasttracker.prototype.effect_t1_ee=function(mod, ch) { // ee
 }
 Fasttracker.prototype.effect_t1_ef=function(mod, ch) { // ef
 }
+
+module.exports = Fasttracker;

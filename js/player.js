@@ -2,13 +2,17 @@
   front end wrapper class for format-specific player classes
   (c) 2015 firehawk/tda
 */
+var Protracker = require('webaudio-mod-player/js/pt.js');
+var Screamtracker = require('webaudio-mod-player/js/st3.js');
+var Fasttracker = require('webaudio-mod-player/js/ft2.js');
 
-function Modplayer()
+function Modplayer(options)
 {
-  this.supportedformats=new Array('mod', 's3m', 'xm');
+  options = options || {};
+  this.supportedformats=options.supportedformats || new Array('mod', 's3m', 'xm');
 
-  this.url="";
-  this.format="s3m";
+  this.url=options.url || "";;
+  this.format=options.format || "s3m";
 
   this.state="initializing..";
   this.request=null;
@@ -18,8 +22,8 @@ function Modplayer()
   this.paused=false;
   this.repeat=false;
 
-  this.separation=1;
-  this.mixval=8.0;
+  this.separation=options.separation || 1;
+  this.mixval=options.mixval || 8.0;
 
   this.amiga500=false;
 
@@ -27,7 +31,7 @@ function Modplayer()
   this.endofsong=false;
 
   this.autostart=false;
-  this.bufferstodelay=4; // adjust this if you get stutter after loading new song
+  this.bufferstodelay=options.bufferstodelay || 4; // adjust this if you get stutter after loading new song
   this.delayfirst=0;
   this.delayload=0;
 
@@ -483,4 +487,6 @@ Modplayer.prototype.mix = function(ape) {
   }
 
 
-}
+};
+
+module.exports = Modplayer;
