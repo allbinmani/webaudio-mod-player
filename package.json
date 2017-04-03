@@ -1,0 +1,26 @@
+{
+  "name": "webaudio-mod-player",
+  "version": "1.0.0",
+  "description": "MOD/S3M/XM module player for Web Audio",
+  "main": "js/player.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhalme/webaudio-mod-player.git"
+  },
+  "keywords": [
+    "MOD",
+    "S3M",
+    "XM",
+    "WebAudio",
+    "Amiga"
+  ],
+  "author": "Jani Halme (https://jh.ax/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhamle/webaudio-mod-player/issues"
+  },
+  "homepage": "https://mod.haxor.fi/"
+}
