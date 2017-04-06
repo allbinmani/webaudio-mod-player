@@ -27,3 +27,13 @@ function dos2utf(c) {
   ];
   return String.fromCharCode(cs[c-128]);
 }
+
+if(module) {
+    module.exports = {
+        dos2utf: dos2utf,
+        le_word: le_word,
+        le_dword:le_dword,
+        s_byte:s_byte,
+        s_le_word:s_le_word
+    };
+}

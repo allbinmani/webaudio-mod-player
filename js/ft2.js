@@ -11,6 +11,13 @@
   greets to guru, alfred and ccr for their work figuring out the .xm format. :)
 
 */
+if(require) {
+    var dos2utf = require('./utils').dos2utf;
+    var le_dword = require('./utils').le_dword;
+    var le_word = require('./utils').le_word;
+    var s_byte = require('./utils').s_byte;
+    var s_le_word = require('./utils').s_le_word;
+}
 
 function Fasttracker()
 {
@@ -1379,4 +1386,6 @@ Fasttracker.prototype.effect_t1_ee=function(mod, ch) { // ee
 Fasttracker.prototype.effect_t1_ef=function(mod, ch) { // ef
 }
 
-module.exports = Fasttracker;
+if(module) {
+    module.exports = Fasttracker;
+}
