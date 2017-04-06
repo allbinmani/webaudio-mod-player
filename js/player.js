@@ -2,9 +2,11 @@
   front end wrapper class for format-specific player classes
   (c) 2015 firehawk/tda
 */
-var Protracker = require('webaudio-mod-player/js/pt.js');
-var Screamtracker = require('webaudio-mod-player/js/st3.js');
-var Fasttracker = require('webaudio-mod-player/js/ft2.js');
+if(require) {
+    var Protracker = require('webaudio-mod-player/js/pt.js');
+    var Screamtracker = require('webaudio-mod-player/js/st3.js');
+    var Fasttracker = require('webaudio-mod-player/js/ft2.js');
+}
 
 function Modplayer(options)
 {
@@ -489,4 +491,6 @@ Modplayer.prototype.mix = function(ape) {
 
 };
 
-module.exports = Modplayer;
+if(module) {
+    module.exports = Modplayer;
+}

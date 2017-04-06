@@ -758,5 +758,7 @@ Protracker.prototype.effect_t1_ef=function(mod, ch) { // ef
 }
 
 
-module.exports = Protracker;
+if(module) {
+    module.exports = Protracker;
+}
 

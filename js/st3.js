@@ -995,4 +995,6 @@ Screamtracker.prototype.effect_t1_se=function(mod, ch) { // pattern delay
 Screamtracker.prototype.effect_t1_sf=function(mod, ch) { // funkrepeat (not implemented)
 }
 
-module.exports = Screamtracker;
+if(module) {
+    module.exports = Screamtracker;
+}
